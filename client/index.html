@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Search Interface</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Log Search Interface</h1>
+
+      <div class="search-container">
+        <input id="searchInput" type="text" placeholder="Search logs..." />
+      </div>
+
+      <div class="filters-container">
+        <label>Filter by:</label>
+
+        <div>
+          <input type="checkbox" id="filterLevel" value="level" />
+          <label for="filterLevel">Level</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="filterMessage" value="message" />
+          <label for="filterMessage">Message</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="filterResourceId" value="resourceId" />
+          <label for="filterResourceId">Resource ID</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="filterTimestamp" value="timestamp" />
+          <label for="filterTimestamp">Timestamp</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="filterTraceId" value="traceId" />
+          <label for="filterTraceId">Trace ID</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="filterSpanId" value="spanId" />
+          <label for="filterSpanId">Span ID</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="filterCommit" value="commit" />
+          <label for="filterCommit">Commit</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            id="filterParentResourceId"
+            value="metadata.parentResourceId"
+          />
+          <label for="filterParentResourceId">Parent Resource ID</label>
+        </div>
+      </div>
+
+      <button onclick="performSearch()">Search</button>
+
+      <textarea
+        id="searchResults"
+        rows="10"
+        placeholder="Search results will be displayed here"
+      ></textarea>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
